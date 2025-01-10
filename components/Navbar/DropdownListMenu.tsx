@@ -13,8 +13,8 @@ import UserIcon from "./UserIcon";
 import Link from "next/link";
 
 import { links } from "@/utils/links";
-
-
+import { SignOutButton } from "@clerk/nextjs";
+import SignOutLinks from "./SignOutLinks";
 
 const DropdownListMenu = () => {
   return (
@@ -28,14 +28,16 @@ const DropdownListMenu = () => {
       <DropdownMenuContent>
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        
-{
-    links.map((item,index)=>{
-        return <DropdownMenuItem key={index} >
-            <Link href={item.href}>{item.label}</Link>
-        </DropdownMenuItem>
-    })
-}
+
+        {links.map((item, index) => {
+          return (
+            <DropdownMenuItem key={index}>
+              <Link href={item.href}>{item.label}</Link>
+            </DropdownMenuItem>
+          );
+        })}
+
+        <SignOutLinks />
       </DropdownMenuContent>
     </DropdownMenu>
   );
