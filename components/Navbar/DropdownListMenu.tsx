@@ -44,7 +44,7 @@ const DropdownListMenu = () => {
           </DropdownMenuItem>
           <DropdownMenuItem>
             <SignUpButton>
-              <button>Signup</button>
+              <button>Signup </button>
             </SignUpButton>
           </DropdownMenuItem>
         </SignedOut>
