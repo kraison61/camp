@@ -20,7 +20,6 @@ const FormContainer = ({
   const [state, formAction] = useActionState(action, initialState);
   const { toast } = useToast();
 
-  console.log("From State :", state);
   useEffect(() => {
     if (state.message) {
       toast({ description: state.message });
